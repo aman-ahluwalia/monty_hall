@@ -26,6 +26,17 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+
+      resource '*',
+        :headers => :any,
+        :methods => [:get, :post, :delete, :put, :options, :head],
+        :max_age => 0
+    end
+  end
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

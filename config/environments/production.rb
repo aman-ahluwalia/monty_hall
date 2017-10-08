@@ -62,6 +62,17 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "monty_hall_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+
+      resource '*',
+        :headers => :any,
+        :methods => [:get, :post, :delete, :put, :options, :head],
+        :max_age => 0
+    end
+  end
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

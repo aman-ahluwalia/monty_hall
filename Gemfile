@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'jwt'
+gem 'pry'
 
 
 # Use CoffeeScript for .coffee assets and views
@@ -32,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
+
+gem 'rack-cors', :require => 'rack/cors'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  p1: 1
+  p2: 1
+  p3: 1
+  jackpot_door: 1
+  status: 1
+  prize: 1
+
+two:
+  user: two
+  p1: 1
+  p2: 1
+  p3: 1
+  jackpot_door: 1
+  status: 1
+  prize: 1

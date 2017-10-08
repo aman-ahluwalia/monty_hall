@@ -11,7 +11,7 @@ class ApiVersion
 
   def versioned_accept_header?(request)
     accept = request.headers['Api-Version']
-    accept && accept[/application\/vnd\.examproject-v#{@version}\+json/]
+    accept && accept[/application\/vnd\.montyhall-v#{@version}\+json/]
   end
 
 end
