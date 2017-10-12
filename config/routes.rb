@@ -6,6 +6,9 @@ Rails.application.routes.draw do
         post '/login/'        => 'sessions#login'
         post '/signup/'       => 'sessions#signup'
 
+        get '/max_game_scores' => 'users#max_game_scores'
+        get '/max_total_scores' => 'users#max_total_scores'
+
         resources :games, only: [:create] do
         	post '/play/'	  => 'games#play'	
         end
